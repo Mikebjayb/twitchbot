@@ -4,4 +4,4 @@ This bot is posted under the "ten digit license". Any use of this source code or
 
 python 3.5, linux 14.04
 
-you can ignore nonblockconsole.py and can probably ignore sock.py as well. Run ircclient.py
+you can ignore nonblockconsole.py.
