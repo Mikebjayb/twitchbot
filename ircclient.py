@@ -93,7 +93,7 @@ logging.info("\n" * 5)
 bot = IrcClient(  'irc.twitch.tv'
                 ,  6667
                 , 'mibaz'
-                , 'oauth:yj33hjx3bkhhiwpv2ac4eu412m7k7t'
+                , 'oauth:yj3************************7k7t'
                 )
 
 run = True
