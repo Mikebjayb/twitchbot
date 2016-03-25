@@ -95,24 +95,3 @@ class Sock(socket.socket):
             if self.con == None:
                 self.con, addr = self.accept()
                 logging.info("accepted connection")
-
-
-#-------------------------------------------------------------------------------
-
-#logging.basicConfig(level = logging.DEBUG, format='[%(levelname)s] (%(threadName)-10s) %(message)s')
-
-#print("\n" * 5)
-#sock = -1
-#console = nonblockconsole.NonBlockConsole()
-#while 1:
-#    msg = console.get_commands()
-#    for key in msg:
-#        if key == "new":
-#            if len(msg[key]) == 1:
-#                sock = Sock(port = int(msg[key][0]))
-#            if len(msg[key]) == 2:
-#                sock = Sock(host = msg[key][0], port = int(msg[key][1]))
-#        elif key == "send":
-#            sock.deliver(msg[key][0])
-#        elif key == "close":
-#            sock.end_con()
