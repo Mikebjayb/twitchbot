@@ -37,11 +37,11 @@ class IrcClient:
     def join_chann(self, chan):
         if self.channel != '':
             self.leave_chann();
-        self.sock.deliver("JOIN #{1}".format(self.username, chan))
+        self.sock.deliver("JOIN #{1}\r\n".format(self.username, chan))
         self.channel = chan
 
     def privmsg(self, msg):
-        self.sock.deliver('PRIVMSG #{} :{}'.format(self.channel, msg))
+        self.sock.deliver('PRIVMSG #{} :{}\r\n'.format(self.channel, msg))
 
     def take_input(self):
         values = self.console.get_commands()
@@ -79,10 +79,10 @@ class IrcClient:
         self.sock.deliver('PASS {}\r\n'.format(self.password))
 
     def enable_membership(self):
-        self.sock.deliver('CAP REQ :twitch.tv/membership')
+        self.sock.deliver('CAP REQ :twitch.tv/membership\r\n')
 
     def leave_chann(self):
-        self.sock.deliver('PART #{}\n'.format(self.channel))
+        self.sock.deliver('PART #{}\r\n'.format(self.channel))
 
 
 #
